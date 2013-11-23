@@ -4,3 +4,208 @@ Started GET "/" for 127.0.0.1 at 2013-11-22 17:46:24 -0500
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/nullthreat/.gem/ruby/2.0.0/gems/railties-4.0.1/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
 Completed 200 OK in 38ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 17:52:28 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/nullthreat/.gem/ruby/2.0.0/gems/railties-4.0.1/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 18:07:07 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/nullthreat/.gem/ruby/2.0.0/gems/railties-4.0.1/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (184.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (165.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateHashes (20131123033311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateHashes (20131123033311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033311"]]
+  [1m[36m (150.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePasswordHashes (20131123033525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033525"]]
+  [1m[36m (154.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePasswords (20131123033721)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033721"]]
+  [1m[36m (143.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTypes (20131123033842)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033842"]]
+  [1m[36m (161.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateStatuses (20131123033848)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033848"]]
+  [1m[36m (178.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 03:43:38 UTC +00:00], ["name", "New"], ["updated_at", Sat, 23 Nov 2013 03:43:38 UTC +00:00]]
+  [1m[36m (144.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 03:44:27 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 03:44:27 UTC +00:00]]
+  [1m[35m (147.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123034636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123034636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123034636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (128.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (156.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePasswordHashes (20131123033525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033525"]]
+  [1m[36m (183.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePasswords (20131123033721)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033721"]]
+  [1m[36m (159.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTypes (20131123033842)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033842"]]
+  [1m[36m (169.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateStatuses (20131123033848)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033848"]]
+  [1m[36m (162.8ms)[0m  [1mcommit transaction[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123034636)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123035636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131123035636"]]
+  [1m[35m (128.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (140.8ms)[0m  [1mCREATE TABLE "password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (148.9ms)[0m  CREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (181.4ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (164.5ms)[0m  CREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (156.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (156.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (156.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (157.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (157.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033721')
+  [1m[36m (157.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033525')[0m
+  [1m[35m (157.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (147.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (156.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePasswordHashes (20131123033525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033525"]]
+  [1m[36m (155.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePasswords (20131123033721)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033721"]]
+  [1m[36m (172.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTypes (20131123033842)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033842"]]
+  [1m[36m (177.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateStatuses (20131123033848)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131123033848"]]
+  [1m[36m (135.7ms)[0m  [1mcommit transaction[0m
+Migrating to FixColumnNameHashToPasswordHash (20131123035636)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "aPassword_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "Password_hashes"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "Password_hashes"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "Password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aPassword_hashes"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aPassword_hashes"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131123035636"]]
+  [1m[35m (146.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (32.7ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:07:03 UTC +00:00], ["name", "new"], ["updated_at", Sat, 23 Nov 2013 04:07:03 UTC +00:00]]
+  [1m[36m (127.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 04:07:53 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 04:07:53 UTC +00:00]]
+  [1m[35m (143.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "password_hashes" ("created_at", "password_hash", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:09:59 UTC +00:00], ["password_hash", "lkjsadkjasdlkj"], ["updated_at", Sat, 23 Nov 2013 04:09:59 UTC +00:00]]
+  [1m[36m (169.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "password_hashes" SET "type_id" = ?, "status_id" = ?, "updated_at" = ? WHERE "password_hashes"."id" = 1[0m  [["type_id", 1], ["status_id", 1], ["updated_at", Sat, 23 Nov 2013 04:10:19 UTC +00:00]]
+  [1m[35m (172.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:15:46 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 04:15:46 UTC +00:00]]
+  [1m[36m (194.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "password_hashes" ("created_at", "type_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 04:17:20 UTC +00:00], ["type_id", 2], ["updated_at", Sat, 23 Nov 2013 04:17:20 UTC +00:00]]
+  [1m[35m (228.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:21:42 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 04:21:42 UTC +00:00]]
+  [1m[36m (139.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mTypes Load (0.2ms)[0m  [1mSELECT "types".* FROM "types" ORDER BY "types"."id" DESC LIMIT 1[0m
+  [1m[35mTypes Load (1.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = ? ORDER BY "types"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (422.7ms)[0m  [1mCREATE TABLE "Password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (172.1ms)[0m  CREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (164.9ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (181.1ms)[0m  CREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (163.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (165.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (156.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (157.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (149.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033721')
+  [1m[36m (167.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033525')[0m
+  [1m[35m (157.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:34:39 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 04:34:39 UTC +00:00]]
+  [1m[36m (204.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 04:34:39 UTC +00:00], ["name", "NEW"], ["updated_at", Sat, 23 Nov 2013 04:34:39 UTC +00:00]]
+  [1m[35m (144.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "password_hashes" ("created_at", "password_hash", "status_id", "type_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 23 Nov 2013 04:34:40 UTC +00:00], ["password_hash", "JK!@#NK!@ASDOAOSJ"], ["status_id", 1], ["type_id", 1], ["updated_at", Sat, 23 Nov 2013 04:34:40 UTC +00:00]]
+  [1m[36m (178.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = ? ORDER BY "types"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mStatuses Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? ORDER BY "statuses"."id" ASC LIMIT 1[0m  [["id", 1]]
