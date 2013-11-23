@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Statuses.new(name: "new").save
+Statuses.new(name: "hash").save
+Statuses.new(name: "cleartext").save
+
+Types.new(name: "LM").save
+Types.new(name: "NTLM").save
+Types.new(name: "NTLMv1").save
+Types.new(name: "MD5").save
+Types.new(name: "SHA1").save
+Types.new(name: "SHA256").save
+Types.new(name: "SHA512").save
+Types.new(name: "MySQL").save

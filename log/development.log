@@ -209,3 +209,217 @@ Migrating to FixColumnNameHashToPasswordHash (20131123035636)
   [1m[36m (178.4ms)[0m  [1mcommit transaction[0m
   [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = ? ORDER BY "types"."id" ASC LIMIT 1  [["id", 1]]
   [1m[36mStatuses Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? ORDER BY "statuses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[36mPasswordHashes Load (2.2ms)[0m  [1mSELECT "password_hashes".* FROM "password_hashes"[0m
+  [1m[35mPasswordHashes Load (0.3ms)[0m  SELECT "password_hashes".* FROM "password_hashes" ORDER BY "password_hashes"."id" DESC LIMIT 1
+  [1m[36mPasswordHashes Load (0.3ms)[0m  [1mSELECT "password_hashes".* FROM "password_hashes" ORDER BY "password_hashes"."id" DESC LIMIT 1[0m
+  [1m[35mStatuses Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" ORDER BY "statuses"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 19:07:43 UTC +00:00], ["name", "CRACKED"], ["updated_at", Sat, 23 Nov 2013 19:07:43 UTC +00:00]]
+  [1m[36m (651.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "password_hashes" SET "status_id" = ?, "updated_at" = ? WHERE "password_hashes"."id" = 1[0m  [["status_id", 2], ["updated_at", Sat, 23 Nov 2013 19:07:48 UTC +00:00]]
+  [1m[35m (204.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar"], ["created_at", Sat, 23 Nov 2013 19:29:34 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:29:34 UTC +00:00]]
+  [1m[36m (651.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mPasswordHashes Load (0.3ms)[0m  SELECT "password_hashes".* FROM "password_hashes"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar"], ["created_at", Sat, 23 Nov 2013 19:32:19 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:32:19 UTC +00:00]]
+  [1m[36m (167.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 19:33:10 UTC +00:00], ["name", "cleartext"], ["updated_at", Sat, 23 Nov 2013 19:33:10 UTC +00:00]]
+  [1m[35m (189.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar"], ["created_at", Sat, 23 Nov 2013 19:33:13 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:33:13 UTC +00:00]]
+  [1m[36m (155.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mStatuses Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "Hello"], ["created_at", Sat, 23 Nov 2013 19:35:17 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:35:17 UTC +00:00]]
+  [1m[36m (188.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mPasswords Load (0.4ms)[0m  SELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar1"], ["created_at", Sat, 23 Nov 2013 19:54:12 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:54:12 UTC +00:00]]
+  [1m[36m (212.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "Hello"], ["created_at", Sat, 23 Nov 2013 19:54:36 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:54:36 UTC +00:00]]
+  [1m[35m (172.6ms)[0m  commit transaction
+  [1m[36mPasswords Load (0.4ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'Hello' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'Hello1' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "Hello1"], ["created_at", Sat, 23 Nov 2013 19:55:47 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:55:47 UTC +00:00]]
+  [1m[35m (131.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.3ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'Hello1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'HEllo1' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "HEllo1"], ["created_at", Sat, 23 Nov 2013 19:55:52 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 19:55:52 UTC +00:00]]
+  [1m[36m (183.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mPasswordHashes Load (0.4ms)[0m  SELECT "password_hashes".* FROM "password_hashes"
+  [1m[36m (159.9ms)[0m  [1mCREATE TABLE "Password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (139.1ms)[0m  CREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (148.2ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (181.4ms)[0m  CREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (162.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (181.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (149.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (140.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (132.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033721')
+  [1m[36m (140.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033525')[0m
+  [1m[35m (141.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (182.8ms)[0m  [1mCREATE TABLE "Password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (180.7ms)[0m  CREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (140.0ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (139.7ms)[0m  CREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (139.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (140.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (140.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (140.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (140.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033721')
+  [1m[36m (157.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033525')[0m
+  [1m[35m (166.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:45:13 UTC +00:00], ["name", "new"], ["updated_at", Sat, 23 Nov 2013 20:45:13 UTC +00:00]]
+  [1m[35m (161.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:45:13 UTC +00:00], ["name", "hash"], ["updated_at", Sat, 23 Nov 2013 20:45:13 UTC +00:00]]
+  [1m[36m (179.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:45:14 UTC +00:00], ["name", "cleartext"], ["updated_at", Sat, 23 Nov 2013 20:45:14 UTC +00:00]]
+  [1m[35m (146.7ms)[0m  commit transaction
+  [1m[36m (178.2ms)[0m  [1mCREATE TABLE "Password_hashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_hash" varchar(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (139.1ms)[0m  CREATE TABLE "passwords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cleartext" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (140.0ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (133.3ms)[0m  CREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (154.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (181.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (164.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (182.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (149.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033721')
+  [1m[36m (141.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033525')[0m
+  [1m[35m (132.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "new"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[35m (153.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "hash"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[36m (154.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "cleartext"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[35m (155.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "LM"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[36m (159.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "NTLM"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[35m (154.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00], ["name", "NTLMv1"], ["updated_at", Sat, 23 Nov 2013 20:59:31 UTC +00:00]]
+  [1m[36m (190.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00], ["name", "MD5"], ["updated_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00]]
+  [1m[35m (162.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00], ["name", "SHA1"], ["updated_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00]]
+  [1m[36m (171.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00], ["name", "SHA256"], ["updated_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00]]
+  [1m[35m (154.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00], ["name", "SHA512"], ["updated_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00]]
+  [1m[36m (155.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00], ["name", "MySQL"], ["updated_at", Sat, 23 Nov 2013 20:59:32 UTC +00:00]]
+  [1m[35m (156.1ms)[0m  commit transaction
+  [1m[36mTypes Load (2.2ms)[0m  [1mSELECT "types".* FROM "types"[0m
+  [1m[35mStatuses Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPasswords Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar"], ["created_at", Sat, 23 Nov 2013 21:19:35 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 21:19:35 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar"], ["created_at", Sat, 23 Nov 2013 21:23:53 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 21:23:53 UTC +00:00]]
+  [1m[36m (157.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.3ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar1"], ["created_at", Sat, 23 Nov 2013 21:48:38 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 21:48:38 UTC +00:00]]
+  [1m[36m (186.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar2' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar2"], ["created_at", Sat, 23 Nov 2013 21:58:51 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 21:58:51 UTC +00:00]]
+  [1m[35m (211.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.1ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar3"], ["created_at", Sat, 23 Nov 2013 22:00:08 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:00:08 UTC +00:00]]
+  [1m[35m (163.6ms)[0m  commit transaction
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types"[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'MD5' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar4' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar4"], ["created_at", Sat, 23 Nov 2013 22:47:50 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:47:50 UTC +00:00]]
+  [1m[35m (145.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar5' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar5"], ["created_at", Sat, 23 Nov 2013 22:50:45 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:50:45 UTC +00:00]]
+  [1m[35m (130.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.1ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar5' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPasswords Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar6' LIMIT 1[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar6"], ["created_at", Sat, 23 Nov 2013 22:52:51 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:52:51 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPasswords Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar6' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPasswords Exists (0.2ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar7' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar7"], ["created_at", Sat, 23 Nov 2013 22:54:37 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:54:37 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.3ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar8' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cleartext", "foobar8"], ["created_at", Sat, 23 Nov 2013 22:54:46 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:54:46 UTC +00:00]]
+  [1m[35m (155.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPasswords Exists (0.3ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar8' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPasswords Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar9' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES (?, ?, ?)  [["cleartext", "foobar9"], ["created_at", Sat, 23 Nov 2013 22:56:38 UTC +00:00], ["updated_at", Sat, 23 Nov 2013 22:56:38 UTC +00:00]]
+  [1m[36m (155.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mStatuses Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.1ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'MD5' LIMIT 1[0m
+  [1m[35mPasswordHashes Load (0.4ms)[0m  SELECT "password_hashes".* FROM "password_hashes"
