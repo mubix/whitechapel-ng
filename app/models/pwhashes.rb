@@ -10,6 +10,11 @@ class Pwhashes < ActiveRecord::Base
   pg_search_scope :search_hashes, :against => [:password_hash]
 
   def generate_hashes_from_cleartext(cleartext, passwordID)
+    pwhashes = Pwhashes.delay.hash_generator(cleartext, passwordID)
+  end
+
+  private
+  def self.hash_generator(cleartext, passwordID)
     require 'digest/sha1'
     require 'digest/md5'
     require 'rex/text'
@@ -31,11 +36,9 @@ class Pwhashes < ActiveRecord::Base
     pwhashes["sha256"] = {:pwhash => Digest::SHA256.hexdigest(cleartext)}
     pwhashes["sha512"] = {:pwhash => Digest::SHA512.hexdigest(cleartext)}
     pwhashes["mysql"] = {:pwhash => "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest(cleartext)).upcase}
-
     pwhashes.each do |type, pwhash|
-      p type
-      p pwhash[:pwhash]
       Pwhashes.new(password_hash: pwhash[:pwhash], type_id: Types.find_by_name(type.downcase).id, status_id: status.id, password_id: passwordID).save
     end
   end
+
 end

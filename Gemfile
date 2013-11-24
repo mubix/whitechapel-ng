@@ -6,7 +6,7 @@ gem 'rails', '4.0.1'
 gem 'librex', :git => 'git://github.com/nullthreat/rex.git'
 gem 'pg', '0.15.1'
 gem 'pg_search'
-#gem 'delayed_job_active_record'
+gem 'delayed_job_active_record'
 #gem 'formean'
 
 group :development, :test do
