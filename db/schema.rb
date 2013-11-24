@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20131124154513) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Password_hashes", force: true do |t|
-    t.string   "password_hash"
-    t.integer  "type_id"
-    t.integer  "status_id"
-    t.integer  "password_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "passwords", force: true do |t|
     t.string   "cleartext"
     t.datetime "created_at"

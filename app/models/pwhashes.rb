@@ -10,7 +10,7 @@ class Pwhashes < ActiveRecord::Base
     require 'digest/sha1'
     require 'digest/md5'
     puts "Looking up status"
-    status = Statuses.find_by_name("cleartext")
+    status = Statuses.find_by_name("generated")
 
     puts "Creating hash of hashes"
     pwhashes = {}

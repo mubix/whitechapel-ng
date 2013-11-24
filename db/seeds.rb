@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Statuses.find_or_create_by(name: "new")
 Statuses.find_or_create_by(name: "hash")
-Statuses.find_or_create_by(name: "cleartext")
+Statuses.find_or_create_by(name: "generated")
+Statuses.find_or_create_by(name: "cracked")
+
 
 Types.find_or_create_by(name: "lm")
 Types.find_or_create_by(name: "ntlm")

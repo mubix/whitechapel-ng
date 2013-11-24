@@ -4,5 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @hashes_count_total = Pwhashes.all.count
+    @cleartext_count_total = Passwords.all.count
   end
 end
