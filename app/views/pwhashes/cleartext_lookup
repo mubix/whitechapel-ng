@@ -1,0 +1,4 @@
+<h1>Cleartext lookup for <%= @cleartext %>:</h1>
+<div>
+  <%= render 'table' %>
+</div>

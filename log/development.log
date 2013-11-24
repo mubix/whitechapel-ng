@@ -2076,3 +2076,1733 @@ Migrating to FixColumnNameHashToPasswordHashAgain (20131124154513)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "*1E44722BDC9BD8F56B16EBEC284AF357B1A7B519"], ["password_id", 1], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
   [1m[35m (1.5ms)[0m  COMMIT
   [1m[36mPwhashes Load (0.7ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-24 10:50:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.erb (1.4ms)
+Completed 200 OK in 291ms (Views: 290.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:38 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+Processing by PwhashesController#index as HTML
+  Rendered pwhashes/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+Processing by PwhashesController#index as HTML
+  Rendered pwhashes/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:50:39 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.8ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  Rendered pwhashes/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 15.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:21 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:22 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:22 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.5ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  Rendered pwhashes/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:55:57 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:56:26 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.4ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (3.6ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered pwhashes/index.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_header.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 31.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:56:27 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.5ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTypes Load (0.2ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pwhashes/index.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:28 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.5ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPasswords Load (0.4ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pwhashes/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:57:39 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.5ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.6ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.3ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)
+  Rendered pwhashes/index.html.erb within layouts/application (38.1ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 36.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:02 -0500
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cleartext", "foobar1"], ["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar1' AND "passwords"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.4ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '6c81243028f8e455fa617dd5f0232ce1' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["password_hash", "6c81243028f8e455fa617dd5f0232ce1"], ["password_id", 2], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[36m (35.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'bb928ca332f5f4fa2cdaef238672e0fbcf5e7a0f' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["password_hash", "bb928ca332f5f4fa2cdaef238672e0fbcf5e7a0f"], ["password_id", 2], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'c0852dbc8d5327c8b3fe08def802cf0da8cb8a63a305731da6cd91bd74a58bf0' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["password_hash", "c0852dbc8d5327c8b3fe08def802cf0da8cb8a63a305731da6cd91bd74a58bf0"], ["password_id", 2], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.2ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'daee9195bf3a4f95c84da79a73f3df5a11b0b098554a4670e03a7cb21fc9c391e048923085031501f1c3f91aa4945139aef8f1b6c3134befa7b70d72fa8ca61a' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["password_hash", "daee9195bf3a4f95c84da79a73f3df5a11b0b098554a4670e03a7cb21fc9c391e048923085031501f1c3f91aa4945139aef8f1b6c3134befa7b70d72fa8ca61a"], ["password_id", 2], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*1D97F67D73EE1DEA597C70A570A0B7A2F9918DD2' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00], ["password_hash", "*1D97F67D73EE1DEA597C70A570A0B7A2F9918DD2"], ["password_id", 2], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:59:36 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar2' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar2' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cleartext", "foobar2"], ["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.5ms)[0m  SELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar2' AND "passwords"."id" != 3) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.4ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'cbac77acf401ef89c3297bd9fc41ec0b' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["password_hash", "cbac77acf401ef89c3297bd9fc41ec0b"], ["password_id", 3], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[36m (28.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'c0ac73e304ca4fd4275985fe1e5ee6a113399eee' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["password_hash", "c0ac73e304ca4fd4275985fe1e5ee6a113399eee"], ["password_id", 3], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'be9b4c9674ae3932cf382b362458d6107e9433d1d9e05bef3eef187bb7785c05' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["password_hash", "be9b4c9674ae3932cf382b362458d6107e9433d1d9e05bef3eef187bb7785c05"], ["password_id", 3], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.2ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '3714b8d5f973244dff76abebf1e81c1b8dfdd9eb82399331393044303f23a9a04c3d270a8cdc19263fd3d1fb4ac0c9715dcf9f081275c35cd3d0e31f8f0fdc1f' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["password_hash", "3714b8d5f973244dff76abebf1e81c1b8dfdd9eb82399331393044303f23a9a04c3d270a8cdc19263fd3d1fb4ac0c9715dcf9f081275c35cd3d0e31f8f0fdc1f"], ["password_id", 3], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*C4E7A9819D247F385BA9290D97622C8C915D027E' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00], ["password_hash", "*C4E7A9819D247F385BA9290D97622C8C915D027E"], ["password_id", 3], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:59:38 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPasswords Load (0.8ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar3' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar3' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cleartext", "foobar3"], ["created_at", Sun, 24 Nov 2013 15:59:39 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:59:39 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.5ms)[0m  SELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar3' AND "passwords"."id" != 4) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'f8b8d6a7367c1e4e0d60c5ac26ba8b04' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00], ["password_hash", "f8b8d6a7367c1e4e0d60c5ac26ba8b04"], ["password_id", 4], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '037526671b140b9060aa6de1083a96fb607db988' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00], ["password_hash", "037526671b140b9060aa6de1083a96fb607db988"], ["password_id", 4], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.7ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '8441e4aa235cc99265b2f342334b7a880b4e17a19942ec390aa08fe8761f2530' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00], ["password_hash", "8441e4aa235cc99265b2f342334b7a880b4e17a19942ec390aa08fe8761f2530"], ["password_id", 4], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.2ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '563eb01ae73f1420e03a34e58f6e2b742798b7ba1c885ffe1db9eabbaca58ec4e9fdd993ac3b98e62837fe014a805951272562297c129a67bc229dc2f1d29146' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00], ["password_hash", "563eb01ae73f1420e03a34e58f6e2b742798b7ba1c885ffe1db9eabbaca58ec4e9fdd993ac3b98e62837fe014a805951272562297c129a67bc229dc2f1d29146"], ["password_id", 4], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00]]
+  [1m[35m (23.8ms)[0m  COMMIT
+  [1m[36mTypes Load (0.6ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*1A0B61CA17A8A9EBADFE543B2444CD594CB4F7D3' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00], ["password_hash", "*1A0B61CA17A8A9EBADFE543B2444CD594CB4F7D3"], ["password_id", 4], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:59:40 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar4' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.5ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar4' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cleartext", "foobar4"], ["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar4' AND "passwords"."id" != 5) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.4ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'fade69a4e0b504c79b6ff48ba37e1be1' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["password_hash", "fade69a4e0b504c79b6ff48ba37e1be1"], ["password_id", 5], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'f761ce17953c5ab48c594cc366abf8201a95e8e5' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["password_hash", "f761ce17953c5ab48c594cc366abf8201a95e8e5"], ["password_id", 5], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '59b70af66b7b610a17d12ee549f4724f972ee5fa03a480fc70e1998076c81e6a' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["password_hash", "59b70af66b7b610a17d12ee549f4724f972ee5fa03a480fc70e1998076c81e6a"], ["password_id", 5], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.2ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '92676a97231c04385694a20b7e5d90204f5ef69a58901d092236443ecc5066c0a4e93a5a2b810a4283c8bcb0deb98ced4eea908c08ecdc25fa82f7b5a4f91a9f' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["password_hash", "92676a97231c04385694a20b7e5d90204f5ef69a58901d092236443ecc5066c0a4e93a5a2b810a4283c8bcb0deb98ced4eea908c08ecdc25fa82f7b5a4f91a9f"], ["password_id", 5], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*F7F73C51B67915A36BD4FCCFF8710E229F74FA38' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00], ["password_hash", "*F7F73C51B67915A36BD4FCCFF8710E229F74FA38"], ["password_id", 5], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:59:41 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar5' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.4ms)[0m  SELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar5' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cleartext", "foobar5"], ["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPasswords Exists (0.5ms)[0m  SELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar5' AND "passwords"."id" != 6) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '24f076dc9d206113d90db39ce8989581' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["password_hash", "24f076dc9d206113d90db39ce8989581"], ["password_id", 6], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '8debce797171cc420ea5f54c439806142e67804a' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["password_hash", "8debce797171cc420ea5f54c439806142e67804a"], ["password_id", 6], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '6e4e5606184b21b0960c83c812509ab6c6f2cca78f2e65f4bbb10f486f80913c' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["password_hash", "6e4e5606184b21b0960c83c812509ab6c6f2cca78f2e65f4bbb10f486f80913c"], ["password_id", 6], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.2ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'caffde5e5519df1ebead4ab03ea20f725bbfcd4b7051b624ae3eeae2b28c0281e815ef00e9f6a1d91780f65174fd59ee243d68675b765762800113efe61dd337' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["password_hash", "caffde5e5519df1ebead4ab03ea20f725bbfcd4b7051b624ae3eeae2b28c0281e815ef00e9f6a1d91780f65174fd59ee243d68675b765762800113efe61dd337"], ["password_id", 6], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*8271EE4F709500122C8DE81F657BA41B4673D337' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00], ["password_hash", "*8271EE4F709500122C8DE81F657BA41B4673D337"], ["password_id", 6], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:59:42 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.7ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)
+  [1m[36mPasswords Load (0.4ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  Rendered pwhashes/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:59:44 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-24 11:05:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.erb (0.9ms)
+Completed 200 OK in 322ms (Views: 294.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:41 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:05:42 -0500
+Processing by CleartextController#index as HTML
+  Rendered cleartext/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:05:42 -0500
+Processing by CleartextController#index as HTML
+  Rendered cleartext/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:05:43 -0500
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords"
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:06:45 -0500
+Processing by CleartextController#index as HTML
+  [1m[35mPasswords Load (1.1ms)[0m  SELECT "passwords".* FROM "passwords"
+  Rendered cleartext/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:06:46 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:07 -0500
+Processing by CleartextController#index as HTML
+  [1m[36mPasswords Load (0.5ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  Rendered cleartext/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `type' for #<Passwords:0x007fe6c1c3bc98>):
+     9:     <% @cleartext.each do |password| %>
+    10:       <tr>
+    11:         <td><%= password.cleartext  %></td>
+    12:         <td><%= password.type.name  %></td>
+    13:       </tr>
+    14:     <% end %>
+    15:     </tbody>
+  app/views/cleartext/index.html.erb:12:in `block in _app_views_cleartext_index_html_erb__629380010812470957_70314535000280'
+  app/views/cleartext/index.html.erb:9:in `_app_views_cleartext_index_html_erb__629380010812470957_70314535000280'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.6ms)
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+Processing by CleartextController#index as HTML
+  [1m[35mPasswords Load (0.5ms)[0m  SELECT "passwords".* FROM "passwords"
+  Rendered cleartext/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.erb (0.6ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:29 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+Processing by CleartextController#index as HTML
+  [1m[36mPasswords Load (0.5ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  Rendered cleartext/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+Processing by CleartextController#index as HTML
+  [1m[35mPasswords Load (0.5ms)[0m  SELECT "passwords".* FROM "passwords"
+  Rendered cleartext/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.7ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  [1m[35mTypes Load (0.6ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)
+  [1m[36mPasswords Load (0.5ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  Rendered pwhashes/index.html.erb within layouts/application (42.4ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 43.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.6ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.4ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)
+  Rendered pwhashes/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:39 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+Processing by CleartextController#index as HTML
+  [1m[36mPasswords Load (0.5ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  Rendered cleartext/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+Processing by CleartextController#index as HTML
+  [1m[35mPasswords Load (0.4ms)[0m  SELECT "passwords".* FROM "passwords"
+  Rendered cleartext/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:07:40 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:08:17 -0500
+Processing by CleartextController#index as HTML
+  [1m[36mPasswords Load (0.5ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  Rendered cleartext/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:08:17 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:08:17 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:08:18 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+Processing by CleartextController#index as HTML
+  [1m[35mPasswords Load (0.5ms)[0m  SELECT "passwords".* FROM "passwords"
+  Rendered cleartext/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:00 -0500
+
+
+Started GET "/cleartext" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+Processing by CleartextController#index as HTML
+  [1m[36mPasswords Load (0.6ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  Rendered cleartext/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:09:11 -0500
+  [1m[36mPasswords Load (1.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1[0m
+  [1m[35mPasswords Load (0.7ms)[0m  SELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1
+  [1m[36mPasswords Load (0.8ms)[0m  [1mSELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1[0m
+  [1m[35mPasswords Load (0.8ms)[0m  SELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1
+  [1m[36mPwhashes Load (0.8ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = $1[0m  [["password_id", 1]]
+  [1m[35mPasswords Load (0.8ms)[0m  SELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "pwhashes" WHERE "pwhashes"."password_id" = $1[0m  [["password_id", 1]]
+  [1m[35mPasswords Load (0.8ms)[0m  SELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "pwhashes" WHERE "pwhashes"."password_id" = $1[0m  [["password_id", 1]]
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:13:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.8ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.6ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.4ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)
+  Rendered pwhashes/index.html.erb within layouts/application (45.4ms)
+  Rendered layouts/_header.erb (0.9ms)
+Completed 200 OK in 145ms (Views: 131.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.6ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  Rendered pwhashes/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.erb (0.9ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:13:39 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:13:43 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+
+RuntimeError ({"controller"=>"pwhashes", "action"=>"cleartext_lookup", "id"=>"1"}):
+  app/controllers/pwhashes_controller.rb:7:in `cleartext_lookup'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+  [1m[35mPwhashes Load (1.0ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mPwhashes Load (0.6ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1[0m
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:15:08 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPwhashes Load (0.6ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `includes' for #<Pwhashes:0x007fdf9422fd00>):
+  app/controllers/pwhashes_controller.rb:7:in `cleartext_lookup'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:15:15 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.4ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms
+
+ActionView::MissingTemplate (Missing template pwhashes/cleartext_lookup, application/cleartext_lookup with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/elliottcutright/Development/Public/whitechapel-ng/app/views"
+):
+  actionpack (4.0.1) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.1) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:403:in `_run__4218208258148694730__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__3598573376132522874__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.7ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.5ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)
+  Rendered pwhashes/index.html.erb within layouts/application (63.3ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 63.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:57 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+Processing by PwhashesController#index as HTML
+  [1m[36mPwhashes Load (0.6ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)[0m
+  Rendered pwhashes/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.erb (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:16:58 -0500
+
+
+Started GET "/hashes" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+Processing by PwhashesController#index as HTML
+  [1m[35mPwhashes Load (0.6ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.3ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1, 2, 3, 4, 5, 6)
+  Rendered pwhashes/_table.html.erb (6.8ms)
+  Rendered pwhashes/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.erb (0.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:17:21 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:18:52 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.5ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  Rendered pwhashes/_table.html.erb (1.6ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `each' for #<Pwhashes:0x007fdf954a4210>):
+     5:     <th>Cleartext</th>
+     6:   </thead>
+     7:   <tbody>
+     8:   <% @pwhashes.each do |pwhash| %>
+     9:     <tr>
+    10:       <td><%= pwhash.password_hash %></td>
+    11:       <td><%= pwhash.type.name %></td>
+  app/views/pwhashes/_table.html.erb:8:in `_app_views_pwhashes__table_html_erb__1527447455024599501_70299120277020'
+  app/views/pwhashes/cleartext_lookup:3:in `_app_views_pwhashes_cleartext_lookup___2603414258776844473_70299129571080'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:19:19 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPwhashes Load (0.4ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 13ms
+
+RuntimeError (#<Pwhashes id: 1, password_hash: "1f9c2f0af40893b27d4e43cfbd38d0ac", type_id: 4, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">):
+  app/controllers/pwhashes_controller.rb:8:in `cleartext_lookup'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:19:39 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.4ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms
+
+RuntimeError (#<Pwhashes id: 1, password_hash: "1f9c2f0af40893b27d4e43cfbd38d0ac", type_id: 4, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">):
+  app/controllers/pwhashes_controller.rb:8:in `cleartext_lookup'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:19:49 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPwhashes Load (0.3ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1
+Completed 500 Internal Server Error in 14ms
+
+RuntimeError (#<ActiveRecord::Relation [#<Pwhashes id: 1, password_hash: "1f9c2f0af40893b27d4e43cfbd38d0ac", type_id: 4, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">, #<Pwhashes id: 2, password_hash: "1f308392240ef628c4a23f2a60b5886d006adf14", type_id: 5, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">, #<Pwhashes id: 3, password_hash: "cabbbc6ab3276573ce5d5b56329bb5799a050a575b8663ab10f...", type_id: 6, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">, #<Pwhashes id: 4, password_hash: "000b868a874ff3937587241e831d23d6a93b0f7bcc42f5743ed...", type_id: 7, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">, #<Pwhashes id: 5, password_hash: "*1E44722BDC9BD8F56B16EBEC284AF357B1A7B519", type_id: 8, status_id: 3, password_id: 1, created_at: "2013-11-24 15:46:44", updated_at: "2013-11-24 15:46:44">]>):
+  app/controllers/pwhashes_controller.rb:8:in `cleartext_lookup'
+
+
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.5ms)
+  Rendered /Users/elliottcutright/.gem/ruby/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.1ms)
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  [1m[36mPwhashes Load (0.3ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1[0m
+  [1m[35mTypes Load (2.9ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPasswords Load (0.8ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = $1 ORDER BY "types"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" = $1 ORDER BY "passwords"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pwhashes/_table.html.erb (45.3ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (46.0ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 42.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:19:54 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:20:00 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  [1m[35mPwhashes Load (0.4ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mPasswords Load (0.2ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)
+  Rendered pwhashes/_table.html.erb (71.9ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (72.6ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 70.9ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:01 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.6ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 ORDER BY "pwhashes"."id" ASC LIMIT 1[0m
+  [1m[35mTypes Load (0.2ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4)
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)[0m
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  [1m[35mPwhashes Load (0.7ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)
+  Rendered pwhashes/_table.html.erb (4.6ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (5.8ms)
+  Rendered layouts/_header.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 11.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:20:54 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.9ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 ORDER BY "pwhashes"."id" ASC LIMIT 1[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4)
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)[0m
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  [1m[35mPwhashes Load (0.6ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1
+  [1m[36mTypes Load (0.5ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)
+  Rendered pwhashes/_table.html.erb (4.7ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (5.9ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:02 -0500
+
+
+Started GET "/hashes/cleartext/1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+Processing by PwhashesController#cleartext_lookup as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPwhashes Load (0.6ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1 ORDER BY "pwhashes"."id" ASC LIMIT 1[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" IN (4)
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)[0m
+DEPRECATION WARNING: The file /Users/elliottcutright/Development/Public/whitechapel-ng/app/views/pwhashes/cleartext_lookup did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from realtime at /Users/elliottcutright/.rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296)
+  [1m[35mPwhashes Load (0.4ms)[0m  SELECT "pwhashes".* FROM "pwhashes" WHERE "pwhashes"."password_id" = 1
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."id" IN (4, 5, 6, 7, 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "passwords".* FROM "passwords" WHERE "passwords"."id" IN (1)
+  Rendered pwhashes/_table.html.erb (3.9ms)
+  Rendered pwhashes/cleartext_lookup within layouts/application (4.6ms)
+  Rendered layouts/_header.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/cleartext.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/pwhashes.css?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/cleartext.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/pwhashes.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 11:21:20 -0500

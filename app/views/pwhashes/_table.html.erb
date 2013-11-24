@@ -1,0 +1,16 @@
+<table class="table table-condensed">
+  <thead>
+    <th>Type</th>
+    <th>Hash</th>
+    <th>Cleartext</th>
+  </thead>
+  <tbody>
+  <% @pwhashes.each do |pwhash| %>
+    <tr>
+      <td><%= pwhash.type.name %></td>
+      <td><%= pwhash.password_hash %></td>
+      <td><%= pwhash.password.cleartext  %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

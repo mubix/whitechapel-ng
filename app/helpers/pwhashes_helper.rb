@@ -1,0 +1,2 @@
+module PwhashesHelper
+end
