@@ -8,3 +8,15 @@
     Percentage of uncracked passwords: <br>
   </p>
 </div>
+
+<%= form_tag("/cleartext/search", method: "post") do %>
+  <%= label_tag(:q, "Cleartext Search For:") %>
+  <%= text_field_tag(:q, nil, placeholder: 'password') %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/hashes/search", method: "post") do %>
+  <%= label_tag(:q, "Hash Search For:") %>
+  <%= text_field_tag(:q, nil, placeholder: 'fda95fbeca288d44aad3b435b51404ee') %>
+  <%= submit_tag("Search") %>
+<% end %>

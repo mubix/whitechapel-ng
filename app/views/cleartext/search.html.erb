@@ -1,0 +1,16 @@
+<h1>Cleartext</h1>
+<div>
+  <table class="table table-condensed">
+    <thead>
+      <th>Cleartext</th>
+    </thead>
+    <tbody>
+    <% @cleartext.each do |password| %>
+      <tr>
+        <td><%= link_to password.cleartext, cleartext_lookup_path(password.id)  %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-primary" disabled="disabled">Export List - Work in Progress</button>

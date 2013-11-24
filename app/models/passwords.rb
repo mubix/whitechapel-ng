@@ -1,7 +1,10 @@
 class Passwords < ActiveRecord::Base
 	has_many :password_hashes, :class_name => "Pwhashes", :foreign_key => "password_id"
   validates :cleartext, presence: true, uniqueness: {case_sensitive: true}
-
+  
+  include PgSearch
+  pg_search_scope :search_cleartext, :against => [:cleartext]
+	
 	def add_cleartext_one(cleartext)
 		password = Passwords.find_or_create_by(cleartext: cleartext)
 		cleartext_db = password.save

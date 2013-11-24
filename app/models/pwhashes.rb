@@ -6,6 +6,9 @@ class Pwhashes < ActiveRecord::Base
   validates :password_hash, presence: true, uniqueness: {case_sensitive: true}
   validates :status_id, presence: true
 
+  include PgSearch
+  pg_search_scope :search_hashes, :against => [:password_hash]
+
   def generate_hashes_from_cleartext(cleartext, passwordID)
     require 'digest/sha1'
     require 'digest/md5'
