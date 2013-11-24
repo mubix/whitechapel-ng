@@ -9,19 +9,27 @@ class Pwhashes < ActiveRecord::Base
   def generate_hashes_from_cleartext(cleartext, passwordID)
     require 'digest/sha1'
     require 'digest/md5'
+    require 'rex/proto/ntlm/crypt'
     puts "Looking up status"
+    rex_crypt = Rex::Proto::NTLM::Crypt
     status = Statuses.find_by_name("generated")
 
     puts "Creating hash of hashes"
     pwhashes = {}
 
     puts "Generating hashes"
+
+    pwhashes["lm"] = {:pwhash => rex_crypt.lm_hash(cleartext[0..13]).unpack("H*").join}
+    #ntlm and ntlmv1 are....unique
+    ntlm = rex_crypt.ntlm_hash(cleartext).unpack("H*")[0]
+    pwhashes["ntlm"] = {:pwhash => ntlm}
+    pwhashes["ntlmv1"] = {:pwhash => rex_crypt.ntlm_response(:ntlm_hash => [ntlm].pack("H*"), :challenge => ['1122334455667788'].pack("H*")).unpack("H*")[0] }
     pwhashes["md5"] = {:pwhash => Digest::MD5.hexdigest(cleartext)}
     pwhashes["sha1"] = {:pwhash => Digest::SHA1.hexdigest(cleartext)}
     pwhashes["sha256"] = {:pwhash => Digest::SHA256.hexdigest(cleartext)}
     pwhashes["sha512"] = {:pwhash => Digest::SHA512.hexdigest(cleartext)}
     pwhashes["mysql"] = {:pwhash => "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest(cleartext)).upcase}
-    
+
     pwhashes.each do |type, pwhash|
       p type
       p pwhash[:pwhash]

@@ -3,7 +3,7 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.1'
-gem 'librex', :git => 'git://github.com/hammackj/rex.git'
+gem 'librex', :git => 'git://github.com/nullthreat/rex.git'
 gem 'pg', '0.15.1'
 
 group :development, :test do

@@ -5,8 +5,8 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
-  remote: git://github.com/hammackj/rex.git
-  revision: 0267700d0bc51db0df7e9941ff60a98ffa39b009
+  remote: git://github.com/nullthreat/rex.git
+  revision: 3cfa67aaa1eced2c8c43687f08cae13da18ddb95
   specs:
     librex (0.0.54)
 
