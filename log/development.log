@@ -1105,3 +1105,26 @@ Migrating to FixColumnNameHashToPasswordHash (20131123035636)
   [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."id" = ? ORDER BY "types"."id" ASC LIMIT 1  [["id", 4]]
   [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" ORDER BY "passwords"."id" ASC LIMIT 1[0m
   [1m[35mPasswordHashes Load (0.2ms)[0m  SELECT "password_hashes".* FROM "password_hashes" WHERE "password_hashes"."password_id" = ? ORDER BY "password_hashes"."id" ASC LIMIT 1  [["password_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-24 08:26:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.erb (0.8ms)
+Completed 200 OK in 308ms (Views: 307.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-24 08:26:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-24 08:26:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-24 08:26:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-24 08:26:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 08:26:18 -0500
