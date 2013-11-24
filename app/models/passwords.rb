@@ -1,5 +1,5 @@
 class Passwords < ActiveRecord::Base
-	has_many :password_hashes, :class_name => "PasswordHashes", :foreign_key => "password_id"
+	has_many :password_hashes, :class_name => "Pwhashes", :foreign_key => "password_id"
   validates :cleartext, presence: true, uniqueness: {case_sensitive: true}
 
 	def add_cleartext_one(cleartext)
@@ -7,7 +7,7 @@ class Passwords < ActiveRecord::Base
 		cleartext_db = password.save
 		if cleartext_db
 			puts "Sending #{cleartext} to hash generator"
-			PasswordHashes.new.generate_hashes_from_cleartext(cleartext, password.id)
+			Pwhashes.new.generate_hashes_from_cleartext(cleartext, password.id)
 		end
 	end
 end

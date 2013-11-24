@@ -1814,3 +1814,265 @@ Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-24 10:26:
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-24 10:26:57 -0500
+  [1m[36mPasswords Load (1.7ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  [1m[35mPasswordHashes Load (0.6ms)[0m  SELECT "password_hashes".* FROM "password_hashes"
+PG::Error: ERROR:  relation "password_hashes" does not exist
+LINE 1: SELECT "password_hashes".* FROM "password_hashes"
+                                        ^
+: SELECT "password_hashes".* FROM "password_hashes"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePasswordHashesTable (20131124153022)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131124153022"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Migrating to CreatePwhashes (20131124153232)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (88.3ms)[0m  CREATE TABLE "pwhashes" ("id" serial primary key, "hash" character varying(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131124153232"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (173.6ms)[0m  [1mDROP DATABASE IF EXISTS "whitechapel_ng_dev"[0m
+  [1m[35m (399.0ms)[0m  CREATE DATABASE "whitechapel_ng_dev" ENCODING = 'unicode'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.3ms)[0m  CREATE TABLE "Password_hashes" ("id" serial primary key, "password_hash" character varying(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "passwords" ("id" serial primary key, "cleartext" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "pwhashes" ("id" serial primary key, "hash" character varying(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "statuses" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "types" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131124153232')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033721')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131124153022')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mStatuses Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'new' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mStatuses Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'new' LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "new"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'hash' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mStatuses Exists (0.3ms)[0m  SELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'hash' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "hash"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mStatuses Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "cleartext"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'lm' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.4ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'lm' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "lm"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'ntlm' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'ntlm' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "ntlm"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'ntlmv1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.3ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'ntlmv1' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "ntlmv1"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "md5"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.2ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "sha1"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "sha256"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.3ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "sha512"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00], ["name", "mysql"], ["updated_at", Sun, 24 Nov 2013 15:34:34 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[36mPasswords Load (40.2ms)[0m  [1mSELECT "passwords".* FROM "passwords"[0m
+  [1m[35mPwhashes Load (0.7ms)[0m  SELECT "pwhashes".* FROM "pwhashes"
+  [1m[36mPasswords Load (1.2ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar' LIMIT 1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cleartext", "foobar"], ["created_at", Sun, 24 Nov 2013 15:35:15 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:35:15 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar' AND "passwords"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36mPasswords Load (0.7ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar1' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cleartext", "foobar1"], ["created_at", Sun, 24 Nov 2013 15:36:05 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:36:05 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar1' AND "passwords"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36mPasswords Load (0.4ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar2' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar2' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cleartext", "foobar2"], ["created_at", Sun, 24 Nov 2013 15:36:11 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:36:11 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar2' AND "passwords"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36mPasswords Load (0.3ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar3' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar3' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cleartext", "foobar3"], ["created_at", Sun, 24 Nov 2013 15:37:00 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:37:00 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar3' AND "passwords"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36m (122.4ms)[0m  [1mDROP DATABASE IF EXISTS "whitechapel_ng_dev"[0m
+  [1m[35m (615.9ms)[0m  CREATE DATABASE "whitechapel_ng_dev" ENCODING = 'unicode'
+  [1m[36mSQL (1.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.9ms)[0m  CREATE TABLE "Password_hashes" ("id" serial primary key, "password_hash" character varying(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "passwords" ("id" serial primary key, "cleartext" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "pwhashes" ("id" serial primary key, "hash" character varying(255), "type_id" integer, "status_id" integer, "password_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "statuses" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "types" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131124153232')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033721')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123033842')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131123033848')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131123035636')
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131124153022')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mStatuses Load (0.9ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'new' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mStatuses Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'new' LIMIT 1[0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "new"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mStatuses Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'hash' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mStatuses Exists (0.3ms)[0m  SELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'hash' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "hash"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mStatuses Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "statuses" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "cleartext"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'lm' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.5ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'lm' LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "lm"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'ntlm' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'ntlm' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "ntlm"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'ntlmv1' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.2ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'ntlmv1' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "ntlmv1"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'md5' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "md5"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.4ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.3ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "sha1"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "sha256"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTypes Exists (0.3ms)[0m  SELECT 1 AS one FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "sha512"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.3ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mTypes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "types" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00], ["name", "mysql"], ["updated_at", Sun, 24 Nov 2013 15:43:17 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPasswords Load (0.7ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar0' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE "passwords"."cleartext" = 'foobar0' LIMIT 1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "passwords" ("cleartext", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cleartext", "foobar0"], ["created_at", Sun, 24 Nov 2013 15:43:54 UTC +00:00], ["updated_at", Sun, 24 Nov 2013 15:43:54 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar0' AND "passwords"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.6ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHashAgain (20131124154513)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "pwhash" RENAME COLUMN "hash" TO "password_hash"[0m
+PG::Error: ERROR:  relation "pwhash" does not exist
+: ALTER TABLE "pwhash" RENAME COLUMN "hash" TO "password_hash"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to FixColumnNameHashToPasswordHashAgain (20131124154513)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "pwhashes" RENAME COLUMN "hash" TO "password_hash"[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131124154513"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPasswords Load (0.9ms)[0m  [1mSELECT "passwords".* FROM "passwords" WHERE "passwords"."cleartext" = 'foobar0' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPasswords Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "passwords" WHERE ("passwords"."cleartext" = 'foobar0' AND "passwords"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mStatuses Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."name" = 'cleartext' LIMIT 1[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'md5' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.6ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '1f9c2f0af40893b27d4e43cfbd38d0ac' LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "1f9c2f0af40893b27d4e43cfbd38d0ac"], ["password_id", 1], ["status_id", 3], ["type_id", 4], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '1f308392240ef628c4a23f2a60b5886d006adf14' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "1f308392240ef628c4a23f2a60b5886d006adf14"], ["password_id", 1], ["status_id", 3], ["type_id", 5], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
+  [1m[36m (35.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.5ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'sha256' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = 'cabbbc6ab3276573ce5d5b56329bb5799a050a575b8663ab10f92dd8aaa76722' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "cabbbc6ab3276573ce5d5b56329bb5799a050a575b8663ab10f92dd8aaa76722"], ["password_id", 1], ["status_id", 3], ["type_id", 6], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mTypes Load (0.4ms)[0m  [1mSELECT "types".* FROM "types" WHERE "types"."name" = 'sha512' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPwhashes Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '000b868a874ff3937587241e831d23d6a93b0f7bcc42f5743edfd91c8c0951076290f6fd9a0ff553bfb986024be1b47e8ccebc7dacb8e4c451e844dc928333cb' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "000b868a874ff3937587241e831d23d6a93b0f7bcc42f5743edfd91c8c0951076290f6fd9a0ff553bfb986024be1b47e8ccebc7dacb8e4c451e844dc928333cb"], ["password_id", 1], ["status_id", 3], ["type_id", 7], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTypes Load (0.3ms)[0m  SELECT "types".* FROM "types" WHERE "types"."name" = 'mysql' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPwhashes Exists (0.3ms)[0m  SELECT 1 AS one FROM "pwhashes" WHERE "pwhashes"."password_hash" = '*1E44722BDC9BD8F56B16EBEC284AF357B1A7B519' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pwhashes" ("created_at", "password_hash", "password_id", "status_id", "type_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00], ["password_hash", "*1E44722BDC9BD8F56B16EBEC284AF357B1A7B519"], ["password_id", 1], ["status_id", 3], ["type_id", 8], ["updated_at", Sun, 24 Nov 2013 15:46:44 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mPwhashes Load (0.7ms)[0m  [1mSELECT "pwhashes".* FROM "pwhashes"[0m
