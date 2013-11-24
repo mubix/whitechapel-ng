@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.1'
 gem 'librex', :git => 'git://github.com/nullthreat/rex.git'
 gem 'pg', '0.15.1'
+#delayed_job_active_record
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

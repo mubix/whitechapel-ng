@@ -7,7 +7,7 @@
     <tbody>
     <% @cleartext.each do |password| %>
       <tr>
-        <td><%= password.cleartext  %></td>
+        <td><%= link_to password.cleartext, cleartext_lookup_path(password.id)  %></td>
       </tr>
     <% end %>
     </tbody>

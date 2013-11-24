@@ -2,6 +2,7 @@
   <thead>
     <th>Type</th>
     <th>Hash</th>
+    <th>Source</th>
     <th>Cleartext</th>
   </thead>
   <tbody>
@@ -9,7 +10,8 @@
     <tr>
       <td><%= pwhash.type.name %></td>
       <td><%= pwhash.password_hash %></td>
-      <td><%= pwhash.password.cleartext  %></td>
+      <td><%= pwhash.status.name %></td>
+      <td><%= link_to pwhash.password.cleartext, cleartext_lookup_path(pwhash.password.id)  %></td>
     </tr>
   <% end %>
   </tbody>
