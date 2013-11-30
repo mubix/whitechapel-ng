@@ -6,5 +6,6 @@ Whitechapel::Application.routes.draw do
   post 'hashes/search' => 'pwhashes#search'
   get 'cleartext' => 'cleartext#index'
   post 'cleartext/search' => 'cleartext#search'
+  get 'cleartext/export' => 'cleartext#export', :as => :cleartext_export
 
 end

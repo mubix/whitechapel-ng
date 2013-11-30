@@ -10,4 +10,14 @@ class CleartextController < ApplicationController
       Passwords.new.add_cleartext_one(params[:q])
     end
   end
+
+  def export
+    passwords = Passwords.all
+    @content = ""
+    passwords.each do |password|
+      @content = @content + password.cleartext + "\n"
+    end
+    send_data @content, :type => 'text', :disposition => "attachment; filename=whitechapel_wordlist.txt"
+  end
+
 end
