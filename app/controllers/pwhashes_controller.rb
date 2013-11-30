@@ -11,7 +11,7 @@ class PwhashesController < ApplicationController
   def search
     @pwhashes = Pwhashes.search_hashes(params[:q])
     if @pwhashes.empty?
-      flash[:alert] = 'Password not found, Please add to the cracking queue'
+      flash[:warning] = 'Password not found, Please add to the cracking queue'
     end
   end
 end
