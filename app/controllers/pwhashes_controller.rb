@@ -5,7 +5,11 @@ class PwhashesController < ApplicationController
 
   def cleartext_lookup
     @pwhashes = Pwhashes.where(password_id: params[:id]).includes(:type, :password)
-    @cleartext = @pwhashes.first.password.cleartext
+    if @pwhashes.empty?
+      @cleartext = []
+    else
+      @cleartext = @pwhashes.first.password.cleartext
+    end
   end
 
   def search
