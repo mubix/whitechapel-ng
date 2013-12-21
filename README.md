@@ -14,9 +14,12 @@ The app does not have authentication so host/protect it wisely.
 At this point I recommend you run in dev mode (default for rails).
 
 Setup-ish:
-git clone
-cp config/database.yml.example config/database.yml
-vim config/database.yml (Setup your database)
-rake db:setup
-rails s
-open the website
+----------
+* git clone
+* cd whitechapel-ng
+* cp config/database.yml.example config/database.yml
+* vim config/database.yml (Setup your database)
+* rake db:setup
+* bin/delayed_job start
+* rails s
+* open the website
