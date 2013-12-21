@@ -1,16 +1,27 @@
 class Passwords < ActiveRecord::Base
 	has_many :password_hashes, :class_name => "Pwhashes", :foreign_key => "password_id"
   validates :cleartext, presence: true, uniqueness: {case_sensitive: true}
+  validates :source, presence: true
+
   
   include PgSearch
   pg_search_scope :search_cleartext, :against => [:cleartext]
 	
-	def add_cleartext_one(cleartext)
-		password = Passwords.find_or_create_by(cleartext: cleartext)
+	def self.add_cleartext_one(cleartext, source)
+		password = Passwords.find_or_create_by(cleartext: cleartext, source: source)
 		cleartext_db = password.save
 		if cleartext_db
-			puts "Sending #{cleartext} to hash generator"
-			Pwhashes.new.generate_hashes_from_cleartext(cleartext, password.id)
+			Pwhashes.delay.generate_hashes_from_cleartext(cleartext, password.id)
 		end
 	end
+
+	def self.add_cleartext_list(file_path, source)
+		file = File.open(file_path, 'r')
+		file.each do |word|
+			Passwords.delay.add_cleartext_one(word, source)
+		end
+		file.close
+		FileUtils.rm file_path
+	end
+
 end

@@ -1,4 +1,0 @@
-<h1>Cleartext Lookup:</h1>
-<div>
-  <%= render 'table' %>
-</div>

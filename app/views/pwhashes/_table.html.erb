@@ -2,16 +2,16 @@
   <thead>
     <th>Type</th>
     <th>Hash</th>
-    <th>Source</th>
     <th>Cleartext</th>
+    <th>Cleartext Source</th>
   </thead>
   <tbody>
   <% @pwhashes.each do |pwhash| %>
     <tr>
       <td><%= pwhash.type.name %></td>
       <td><%= pwhash.password_hash %></td>
-      <td><%= pwhash.status.name %></td>
-      <td><%= link_to pwhash.password.cleartext, cleartext_lookup_path(pwhash.password.id)  %></td>
+      <td><%= pwhash.password.cleartext %></td>
+      <td><%= pwhash.password.source %> </td>
     </tr>
   <% end %>
   </tbody>

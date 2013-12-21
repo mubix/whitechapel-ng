@@ -7,7 +7,12 @@ class CleartextController < ApplicationController
     @cleartext = Passwords.search_cleartext(params[:q])
     if @cleartext.empty?
       flash[:info] = 'Password not found, adding to generation queue'
-      Passwords.new.add_cleartext_one(params[:q])
+      Passwords.delay.add_cleartext_one(params[:q], "search")
+      redirect_to '/'
+    else
+      @cleartext_title = @cleartext.first.cleartext
+      @cleartext_source = @cleartext.first.source
+      @pwhashes = Pwhashes.where(password_id: @cleartext.first.id).includes(:type, :password)
     end
   end
 

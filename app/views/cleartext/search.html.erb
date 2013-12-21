@@ -1,16 +1,18 @@
-<h1>Cleartext</h1>
-<div>
-  <table class="table table-condensed">
-    <thead>
-      <th>Cleartext</th>
-    </thead>
-    <tbody>
-    <% @cleartext.each do |password| %>
-      <tr>
-        <td><%= link_to password.cleartext, cleartext_lookup_path(password.id)  %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
-<button class="btn btn-primary" disabled="disabled">Export List - Work in Progress</button>
+<table class="table table-condensed">
+  <thead>
+    <th>Cleartext</th>
+    <th>Type</th>
+    <th>Hash</th>
+    <th>Cleartext Source</th>
+  </thead>
+  <tbody>
+  <% @pwhashes.each do |pwhash| %>
+    <tr>
+      <td><%= pwhash.password.cleartext %></td>
+      <td><%= pwhash.type.name %></td>
+      <td><%= pwhash.password_hash %></td>
+      <td><%= pwhash.password.source %> </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -9,12 +9,7 @@ class Pwhashes < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search_hashes, :against => [:password_hash]
 
-  def generate_hashes_from_cleartext(cleartext, passwordID)
-    pwhashes = Pwhashes.delay.hash_generator(cleartext, passwordID)
-  end
-
-  private
-  def self.hash_generator(cleartext, passwordID)
+  def self.generate_hashes_from_cleartext(cleartext, passwordID)
     require 'digest/sha1'
     require 'digest/md5'
     require 'rex/text'
@@ -22,12 +17,7 @@ class Pwhashes < ActiveRecord::Base
     puts "Looking up status"
     rex_crypt = Rex::Proto::NTLM::Crypt
     status = Statuses.find_by_name("generated")
-
-    puts "Creating hash of hashes"
     pwhashes = {}
-
-    puts "Generating hashes"
-
     pwhashes["lm"] = {:pwhash => rex_crypt.lm_hash(cleartext[0..13]).unpack("H*").join}
     pwhashes["ntlm"] = {:pwhash => rex_crypt.ntlm_hash(cleartext).unpack("H*")[0]}
     pwhashes["ntlmv1"] = {:pwhash => rex_crypt.ntlm_response(:ntlm_hash => [rex_crypt.ntlm_hash(cleartext).unpack("H*")[0]].pack("H*"), :challenge => ['1122334455667788'].pack("H*")).unpack("H*")[0] }
