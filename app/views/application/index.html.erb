@@ -1,26 +1,26 @@
-<h1>Search: </h1>
-
-<%= form_tag("/cleartext/search", method: "get") do %>
-  <%= label_tag(:q, "Cleartext Search For:") %>
-  <%= text_field_tag(:q, nil, placeholder: 'password') %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<%= form_tag("/hashes/search", method: "get") do %>
-  <%= label_tag(:q, "Hash Search For:") %>
-  <%= text_field_tag(:q, nil, placeholder: 'fda95fbeca288d44aad3b435b51404ee') %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<hr>
-
-<h1>Stats:</h1>
-
-<div class="well">
-  <p>
-    Total number of hashes: <%= @hashes_count_total %><br>
-    Total number of cracked hashes: <br>
-    Total number of cleartext passwords: <%= @cleartext_count_total %><br>
-    Percentage of uncracked passwords: <br>
-  </p>
+<div class="row">
+  <div class="col-lg-6">
+    <h1>Search: </h1>
+    <%= form_tag("/cleartext/search", method: "get") do %>
+      <%= label_tag(:q, "Cleartext Search For:") %>
+      <%= text_field_tag(:q, nil, placeholder: 'password') %>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <%= form_tag("/hashes/search", method: "get") do %>
+      <%= label_tag(:q, "Hash Search For:") %>
+      <%= text_field_tag(:q, nil, placeholder: 'fda95fbeca288d44aad3b435b51404ee') %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+  <div class="col-lg-6">
+    <h1>Stats:</h1>
+    <div class="well">
+      <p>
+        Total number of hashes: <%= @hashes_count_total %><br>
+        Total number of cracked hashes: <br>
+        Total number of cleartext passwords: <%= @cleartext_count_total %><br>
+        Percentage of uncracked passwords: <br>
+      </p>
+    </div>
+  </div>
 </div>
