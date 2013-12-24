@@ -8,7 +8,8 @@ gem 'pg', '0.15.1'
 gem 'pg_search'
 gem 'delayed_job_active_record'
 gem 'daemons'
-#gem 'formean'
+gem 'foreman'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
