@@ -20,6 +20,10 @@ Setup-ish:
 * cp config/database.yml.example config/database.yml
 * vim config/database.yml (Setup your database)
 * rake db:setup
-* bin/delayed_job start
-* rails s
-* open the website
+* foreman start
+* open the website (port 3000)
+
+For additional workers:
+```
+bin/delayed_job -n5 start
+```
