@@ -17,6 +17,7 @@ Setup-ish:
 ----------
 * git clone
 * cd whitechapel-ng
+* bundle install
 * cp config/database.yml.example config/database.yml
 * vim config/database.yml (Setup your database)
 * rake db:setup
