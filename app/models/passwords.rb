@@ -18,7 +18,7 @@ class Passwords < ActiveRecord::Base
 	def self.add_cleartext_list(file_path, source)
 		file = File.open(file_path, 'r')
 		file.each do |word|
-			Passwords.delay.add_cleartext_one(word, source)
+			Passwords.delay(priority: 2).add_cleartext_one(word, source)
 		end
 		file.close
 		FileUtils.rm file_path
