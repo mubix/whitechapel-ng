@@ -1,9 +1,9 @@
-source 'https://rubygems.org'
 ruby '2.0.0'
+source 'https://rubygems.org'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.1'
-gem 'librex', :git => 'git://github.com/nullthreat/rex.git'
+gem 'librex', :git => 'http://github.com/nullthreat/rex.git'
 gem 'pg', '0.15.1'
 gem 'pg_search'
 gem 'delayed_job_active_record'
@@ -26,7 +26,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.3.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', :git => 'http://github.com/bmabey/database_cleaner.git'
 end
 
 gem 'sass-rails', '4.0.1'
