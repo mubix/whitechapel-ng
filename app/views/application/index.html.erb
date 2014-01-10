@@ -2,15 +2,21 @@
   <div class="col-lg-6">
     <h1>Search: </h1>
     <%= form_tag("/cleartext/search", method: "get") do %>
-      <%= label_tag(:q, "Cleartext Search For:") %>
+      <%= label_tag(:q, "Cleartext Search: ") %>
       <%= text_field_tag(:q, nil, placeholder: 'password') %>
-      <%= submit_tag("Search") %>
+      <br>
+      <%= label_tag(:s, "Password Source: ") %>
+      <%= text_field_tag(:s, nil, placeholder: 'CorpAD01') %>
+      <br>
+      <%= submit_tag("Search", class: "btn btn-primary pull-right") %>
     <% end %>
+    <br>
+    <hr>
     <%= form_tag("/hashes/search", method: "get") do %>
-      <%= label_tag(:q, "Hash Search For:") %>
+      <%= label_tag(:q, "Hash Search: ") %>
       <%= text_field_tag(:q, nil, placeholder: 'fda95fbeca288d44aad3b435b51404ee') %>
-      <%= submit_tag("Search") %>
-    <% end %>
+      <br>
+      <%= submit_tag("Search", class: "btn btn-primary pull-right") %>    <% end %>
   </div>
   <div class="col-lg-6">
     <h1>Stats:</h1>
@@ -18,9 +24,9 @@
       <p>
         Total number of hashes: <%= @hashes_count_total %><br>
         Total number of cleartext passwords: <%= @cleartext_count_total %><br>
-        Total number of cracked hashes: NA<br>
+<!--         Total number of cracked hashes: NA<br>
         Total number of uncracked hashes: NA<br>
-        Percentage of uncracked passwords: NA<br>
+        Percentage of uncracked passwords: NA<br> -->
       </p>
     </div>
   </div>

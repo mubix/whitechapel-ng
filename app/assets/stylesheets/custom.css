@@ -21,3 +21,7 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+#s , #q {
+  width: 50%;
+}

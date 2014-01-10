@@ -1,11 +1,11 @@
 GIT
-  remote: git://github.com/bmabey/database_cleaner.git
-  revision: 733849482546297c48f97b292cf3ad4e498eaad0
+  remote: http://github.com/bmabey/database_cleaner.git
+  revision: 072492166e82969136d1abaeccbcadaae4fe6539
   specs:
     database_cleaner (1.2.0)
 
 GIT
-  remote: git://github.com/nullthreat/rex.git
+  remote: http://github.com/nullthreat/rex.git
   revision: 3cfa67aaa1eced2c8c43687f08cae13da18ddb95
   specs:
     librex (0.0.54)
