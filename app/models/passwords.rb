@@ -8,6 +8,7 @@ class Passwords < ActiveRecord::Base
   pg_search_scope :search_cleartext, :against => [:cleartext]
 	
 	def self.add_cleartext_one(cleartext, source)
+		cleartext = cleartext.gsub("\n","")
 		password = Passwords.find_or_create_by(cleartext: cleartext, source: source)
 		cleartext_db = password.save
 		if cleartext_db

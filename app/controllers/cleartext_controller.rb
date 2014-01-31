@@ -24,7 +24,8 @@ class CleartextController < ApplicationController
     passwords = Passwords.all
     @content = ""
     passwords.each do |password|
-      @content = @content + password.cleartext + "\n"
+      password = password.cleartext.gsub("\n", "")
+      @content = @content + password + "\n"
     end
     send_data @content, :type => 'text', :disposition => "attachment; filename=whitechapel_wordlist.txt"
   end

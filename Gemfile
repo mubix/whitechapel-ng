@@ -9,6 +9,7 @@ gem 'pg_search'
 gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'foreman'
+gem 'puma'
 
 
 group :development, :test do
