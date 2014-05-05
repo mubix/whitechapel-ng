@@ -4,7 +4,8 @@ class CleartextController < ApplicationController
   end
 
   def search
-    @cleartext = Passwords.search_cleartext(params[:q])
+    #@cleartext = Passwords.search_cleartext(params[:q])
+    @cleartext = Passwords.where(password: params[:q])
     if @cleartext.empty?
       flash[:info] = 'Password not found, adding to generation queue'
       unless params[:s] = ""
