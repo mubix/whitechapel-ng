@@ -8,7 +8,7 @@ class CleartextController < ApplicationController
     @cleartext = Passwords.where(password: params[:q])
     if @cleartext.empty?
       flash[:info] = 'Password not found, adding to generation queue'
-      unless params[:s] = ""
+      unless params[:s] == ""
         Passwords.delay.add_cleartext_one(params[:q], params[:s])
       else
         Passwords.delay.add_cleartext_one(params[:q], "search")
