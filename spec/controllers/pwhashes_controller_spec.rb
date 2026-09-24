@@ -1,12 +1,10 @@
-require 'spec_helper'
+require "rails_helper"
 
-describe PwhashesController do
-
+RSpec.describe PwhashesController, type: :controller do
   describe "GET 'index'" do
     it "returns http success" do
-      get 'index'
-      response.should be_success
+      get :index
+      expect(response).to have_http_status(:success)
     end
   end
-
 end

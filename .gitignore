@@ -10,6 +10,8 @@
 .log
 /tmp
 tmp/*
+!tmp/.keep
+!log/.keep
 
 # Ignore other unneeded files.
 /config/database.yml

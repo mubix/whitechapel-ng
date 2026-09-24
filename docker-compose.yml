@@ -1,0 +1,62 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: whitechapel
+      POSTGRES_PASSWORD: whitechapel
+      POSTGRES_DB: whitechapel_ng_dev
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U whitechapel"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    entrypoint: /app/docker/entrypoint.sh
+    command: bundle exec puma -b tcp://0.0.0.0:3000
+    environment: &app_env
+      RAILS_ENV: development
+      DATABASE_HOST: db
+      DATABASE_USERNAME: whitechapel
+      DATABASE_PASSWORD: whitechapel
+      SECRET_KEY_BASE: "development-only-key-change-me-in-production"
+    ports:
+      - "3100:3000"
+    volumes:
+      # Shared with the worker: uploaded wordlists are dropped here
+      # by the web process and consumed by the delayed_job worker.
+      - shared-tmp:/app/tmp
+    depends_on:
+      db:
+        condition: service_healthy
+
+  worker:
+    build: .
+    entrypoint: /app/docker/entrypoint.sh
+    command: bundle exec rake jobs:work
+    environment: *app_env
+    volumes:
+      - shared-tmp:/app/tmp
+    depends_on:
+      db:
+        condition: service_healthy
+      app:
+        condition: service_started
+
+  test:
+    build: .
+    entrypoint: /app/docker/entrypoint.sh
+    command: bundle exec rspec
+    environment:
+      <<: *app_env
+      RAILS_ENV: test
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  shared-tmp:
