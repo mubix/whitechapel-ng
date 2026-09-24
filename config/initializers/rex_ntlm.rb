@@ -1,6 +1,13 @@
 # Load the Rex pieces the app uses for hash generation (the top-level "rex"
 # require is lightweight and is loaded by Bundler automatically).
 require "openssl"
+
+# Define the base module so rex's sub-libraries load without the
+# top-level rex.rb (which overloads Kernel#sleep and Kernel#select
+# and breaks ActionView 7.2's tag builder).
+module Rex
+end
+
 require "rex/text"
 require "rex/proto/ntlm/crypt"
 
